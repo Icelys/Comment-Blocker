@@ -3,7 +3,7 @@
 // @namespace   icelys.github.io
 // @description Blockes unwanted comments on your profile
 // @match       https://scratch.mit.edu/users/*
-// @version     1
+// @version     1.1
 // @grant       none
 // ==/UserScript==
 
@@ -11,7 +11,7 @@ var comments=document.getElementsByClassName("content");
 var save=[];
 
 var adRegex=/(\w{3,})+ (you) *(\w)* *(check *out|look *at)/ig;
-var followRegex=/f(|ollow) *(4|for|me) *(f(|ollow))*/ig;
+var followRegex=/^(\W|)*f(|ollow) *(4(?=f(|ollow))|for|me) *(f(|ollow)+|(?!me))/ig;
     
 function modify(num){
   save.push(comments[num].innerHTML);

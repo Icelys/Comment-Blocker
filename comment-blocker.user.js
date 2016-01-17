@@ -11,7 +11,7 @@ var comments=document.getElementsByClassName("content");
 var save=[];
 
 var adRegex=/(\w{3,})+ (you) *(\w)* *(check *out|look *at)/ig;
-var followRegex=/^(\W|)*f(|ollow) *(4(?=f(|ollow))|for|me) *(f(|ollow)+|(?!me))/ig;
+var followRegex=/(\W|)*f(|ollow) *(4(?=f(|ollow))|for|me) *(f(|ollow)+|(?!me))/ig;
     
 function modify(num){
   save.push(comments[num].innerHTML);
